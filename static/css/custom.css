@@ -8,3 +8,7 @@
 .box-simple {
   min-height: 230px;
 }
+
+textarea.form-control {
+  height: 150px;
+}
