@@ -12,3 +12,13 @@
 textarea.form-control {
   height: 150px;
 }
+
+.navbar-slogan {
+  margin-left: 30px;
+  margin-top: 25px;
+  font-style: italic;
+}
+
+.navbar-logo {
+  height: 43px;
+}
