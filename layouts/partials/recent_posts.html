@@ -44,7 +44,14 @@
                             {{ with .Params.author }}
                             {{ i18n "authorBy" }} <a href="#">{{ . }}</a>
                             {{ end }}
-                            {{ i18n "publishedOn" }} {{ .Date.Format .Site.Params.date_format }}
+                            {{ i18n "publishedOn" }}
+                            {{ if .Site.Params.enableDateMonthTranslation }}
+                              <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+                                {{ .Date.Day }} {{ index $.Site.Data.maand (printf "%d" .Date.Month) }} {{ .Date.Year }}
+                              </time>
+                            {{ else }}
+                              {{ .Date.Format .Site.Params.date_format }}
+                            {{ end }}
                             </p>
                             <p class="intro">{{ .Summary }}</p>
                             <p class="read-more">

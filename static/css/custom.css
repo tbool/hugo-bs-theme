@@ -22,3 +22,7 @@ textarea.form-control {
 .navbar-logo {
   height: 43px;
 }
+
+p.author-category {
+  text-transform: initial;
+}
