@@ -17,6 +17,11 @@
 
 <script src="//cdn.jsdelivr.net/npm/vue"></script>
 <script src="//storage.googleapis.com/ton-js/app.761de646.js"></script>
+<script
+  src="//www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit"
+  async
+  defer
+></script>
 {{ if .Site.Params.googleMapsApiKey }}
 <script src="//maps.googleapis.com/maps/api/js?key={{.Site.Params.googleMapsApiKey}}&v=3.exp"></script>
 {{ else }}
